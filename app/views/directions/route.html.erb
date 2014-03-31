@@ -1,0 +1,11 @@
+
+<p><%= @results %></p>
+
+<ul>
+  <% @results['instructions'].each do |instruction| %>
+      <ol>Get on at <%= instruction['departure_stop'] %> and get off at <%= instruction['arrival_stop'] %></ol>
+
+  <% end %>
+</ul>
+
+<%= @accessible_stops %>

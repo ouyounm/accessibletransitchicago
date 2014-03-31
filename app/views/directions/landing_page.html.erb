@@ -1,0 +1,34 @@
+<div class="container">
+
+  <header class="logo">
+    <i class="fa fa-location-arrow blue arrow"></i>Handicap<span class="blue">Map</span>
+  </header>
+
+ <div class="row">
+
+      <%= form_tag(directions_url, method: "get", class: "input-group col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1") do %>
+
+          <div class="row">
+            <i class="fa fa-map-marker blue pull-left"></i>
+            <%= label_tag(:start, "Start", class: 'pull-left') %>
+            <%= text_field_tag(:start, "", class: "form-control") %>
+          </div>
+
+          <div class="row push-down">
+            <i class="fa fa-map-marker blue pull-left"></i>
+            <%= label_tag(:destination, "Destination", class: "pull-left") %>
+            <%= text_field_tag(:destination, "", class: "form-control") %>
+          </div>
+
+          <div class="row push-far-down">
+            <span class="input-group-btn">
+              <!-- <i class="fa fa-external-link-square pull-right"></i> -->
+              <%= submit_tag("Map it", class: "btn btn-default pull-right") %>
+            </span>
+          </div>
+
+      <% end %>
+
+  </div>
+
+</div>
